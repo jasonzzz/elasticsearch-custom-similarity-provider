@@ -1,18 +1,14 @@
 package org.elasticsearch.index.similarity;
 
-import org.apache.lucene.search.DefaultSimilarity;
+import org.apache.lucene.search.similarities.ClassicSimilarity;
 
-/**
- * Custom similarity class
- * 
- * @author tanguy
- *
- */
 @SuppressWarnings("serial")
-public class CustomSimilarity extends DefaultSimilarity {
+public class CustomSimilarity extends ClassicSimilarity {
+	public CustomSimilarity() {
+    }
 
-	@Override
-	public float idf(int docFreq, int numDocs) {
-		return 1.0f;
-	}
+    @Override
+    public float idf(long docFreq, long numDocs){
+        return 1.0f;
+    }
 }

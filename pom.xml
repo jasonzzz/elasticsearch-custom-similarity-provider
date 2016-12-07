@@ -3,16 +3,24 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>fr.tlrx</groupId>
-	<artifactId>elasticsearch-custom-similarity-provider</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<artifactId>elasticsearch-constant-similarity-provider</artifactId>
+	<version>1.0</version>
 	<packaging>jar</packaging>
-	<name>A custom SimilarityProvider example for Elasticsearch</name>
-	<url>https://github.com/tlrx/elasticsearch-custom-similarity-provider</url>
+	<name>A constant SimilarityProvider for Elasticsearch</name>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<elasticsearch.version>0.20.0.Beta1-SNAPSHOT</elasticsearch.version>
-	</properties>
+	<build>
+		<plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+	</build>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <elasticsearch.version>2.3.5</elasticsearch.version>
+    </properties>
 
 	<dependencies>
 		<dependency>
@@ -27,5 +35,5 @@
 			<version>${elasticsearch.version}</version>
 		</dependency>
 	</dependencies>
-	
+
 </project>
